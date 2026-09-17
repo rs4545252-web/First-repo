@@ -1,0 +1,153 @@
+/* responsive.css: Media queries and responsive adjustments */
+
+@media (max-width: 1200px) {
+  .profile-body-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resume-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-grid-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .global-navbar {
+    height: auto;
+  }
+
+  .nav-tabs {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .jobs-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 24px;
+  }
+
+  .profile-avatar-container {
+    margin-top: -60px;
+  }
+
+  .profile-meta-chips, .profile-links-row {
+    justify-content: center;
+  }
+
+  .profile-title-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-meta-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kanban-board-container {
+    grid-template-columns: repeat(6, 260px);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    padding: 20px 14px;
+  }
+
+  .page-title {
+    font-size: 1.35rem;
+  }
+
+  .filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-toggle-item {
+    margin-left: 0;
+  }
+
+  .form-row-2, .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    margin: 10px;
+    max-height: 95vh;
+  }
+
+  .resume-paper {
+    padding: 24px 16px;
+  }
+
+  .banner-actions,
+  .profile-actions-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .banner-actions .btn,
+  .profile-actions-group .btn {
+    flex: 1 1 auto;
+  }
+
+  .modal-actions-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .modal-actions-footer .btn {
+    width: 100%;
+  }
+
+  .offer-signature-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-resume, #printable-resume * {
+    visibility: visible;
+  }
+  #printable-resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .global-navbar, .page-title-banner, .resume-control-column, .toast-container {
+    display: none !important;
+  }
+}
